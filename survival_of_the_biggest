@@ -1,0 +1,12 @@
+numbers = input().split()
+number_to_remove = int(input())
+number_list = []
+
+for number in numbers:
+    current_number = int(number)
+    number_list.append(current_number)
+
+for i in range(number_to_remove):
+    number_list.remove(min(number_list))
+
+print(*number_list, sep=', ')
